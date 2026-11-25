@@ -1,0 +1,18 @@
+test,question,in_scope,expected,answered,top3 sources,source hit@1,source hit@3,answer has key fact,correct behaviour
+C01,How often do I have to change my password?,True,1,True,"1, 50, 26",True,True,True,True
+C02,My VPN keeps disconnecting when I work from home,True,47,True,"47, 3",True,True,True,True
+C03,What should I do if I lose my company phone?,True,"37, 57",True,"57, 37, 5",True,True,True,True
+C04,The printer says there is a paper jam,True,49,True,"49, 15",True,True,True,True
+C05,I got an email asking for my bank account details,True,24,True,"24, 54, 2",True,True,True,True
+C06,Can I use my personal Dropbox for work files?,True,38,True,"38, 3, 28",True,True,True,True
+C07,How long are emails kept?,True,29,True,"48, 29, 24",False,True,True,True
+C08,My account got locked after too many attempts,True,18,True,"18, 54, 13",True,True,True,True
+C09,How do I request vacation days?,True,10,True,"10, 31",True,True,True,True
+C10,When are security patches installed?,True,11,True,"58, 11, 23",False,True,True,True
+C11,The laptop battery does not charge,True,46,True,"46, 22, 25",True,True,True,True
+C12,How do visitors get Wi-Fi?,True,"35, 60",True,"60, 35, 19",True,True,True,True
+C13,What's the weather in Monterrey today?,False,(none),False,-,,,,True
+C14,Who won the football game yesterday?,False,(none),False,-,,,,True
+C15,Recommend me a good pizza place,False,(none),False,-,,,,True
+C16,What time does the cafeteria open?,False,(none),True,"51, 18, 24",,,,False
+C17,What are the best movies of the year?,False,(none),False,-,,,,True

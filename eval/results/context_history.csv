@@ -1,0 +1,7 @@
+scenario,previous activity,query,relevant,top5 without history,top5 with history,MRR without,MRR with,R@5 without,R@5 with
+S01,search:my VPN keeps dropping when I work at home,connection problem,"3, 14, 47","42, 14, 17, 59, 19","47, 14, 3, 42, 19",0.5,1.0,0.333,1.0
+S02,search:the printer on the second floor,it is not responding,"15, 49","15, 49, 22, 36, 47","15, 49, 22, 36, 47",1.0,1.0,1.0,1.0
+S03,search:I got a phishing email asking for my bank details,how do I report it,"8, 24, 51","22, 19, 45, 37, 14","24, 45, 22, 15, 14",0.1,1.0,0.0,0.333
+S04,view:27,the code is not arriving,"27, 43","43, 27, 11, 24, 12","43, 27, 11, 24, 12",1.0,1.0,1.0,1.0
+S05,search:a new hire starts on monday,account setup,"2, 54","54, 18, 2, 1, 38","54, 18, 2, 1, 38",1.0,1.0,1.0,1.0
+S06,search:video conference in the boardroom,there is no sound,"42, 52",(no results),"52, 42, 59, 19, 17",0.0,1.0,0.0,1.0

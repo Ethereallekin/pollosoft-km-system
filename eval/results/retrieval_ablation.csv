@@ -1,0 +1,7 @@
+configuration,P@5,R@5,Hit@1,MRR
+Phase I baseline: TF-IDF,0.344,0.777,0.8,0.851
++ stemming,0.376,0.843,0.8,0.867
+"+ LSA semantic (hybrid, final)",0.392,0.897,0.84,0.871
+LSA semantic only,0.4,0.91,0.84,0.875
+hybrid + ontology query expansion,0.384,0.857,0.8,0.848
+TF-IDF + ontology expansion (no stemming),0.36,0.803,0.76,0.83

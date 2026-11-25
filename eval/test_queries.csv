@@ -1,0 +1,26 @@
+query_id,query,relevant_ids
+Q01,how often do I need to change my password,1;26;50
+Q02,my computer got a virus,8;44;51
+Q03,I can't connect to the VPN from home,14;47;3
+Q04,someone sent me a suspicious email asking for my bank details,24;51;39
+Q05,what happens to my laptop and accounts when I quit the company,6
+Q06,the printer is not printing anything,15;49;36
+Q07,how do I get a new program installed on my computer,7;20;41;56
+Q08,I lost my work phone on a trip,37;57;5
+Q09,I am not getting new emails in my inbox,16;48
+Q10,I want to request some days off,10
+Q11,there is no space left on the disk,21;55
+Q12,how are backups made and how do we recover lost files,4;33;44
+Q13,the login code from the authenticator app never arrives,43;27
+Q14,visitors need internet access in the office,35;60
+Q15,people in the call can't hear us from the meeting room,52;42
+Q16,my screen turns blue when the computer starts,17
+Q17,who is allowed to modify the production database,9;31
+Q18,I bought a cable for work and want my money back,12
+Q19,where should I save my work files,4;38;34
+Q20,my account is blocked after typing the wrong password several times,18;50
+Q21,the internet is very slow in the conference room,19
+Q22,my second screen shows nothing,22
+Q23,setting up accounts and computer for a new hire,2;54
+Q24,how should I protect confidential documents,34;13;36
+Q25,my ticket was not solved who handles it next,30;40

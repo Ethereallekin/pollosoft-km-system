@@ -1,0 +1,7 @@
+scenario_id,history,query,relevant_ids
+S01,search:my VPN keeps dropping when I work at home,connection problem,14;47;3
+S02,search:the printer on the second floor,it is not responding,15;49
+S03,search:I got a phishing email asking for my bank details,how do I report it,24;8;51
+S04,view:27,the code is not arriving,43;27
+S05,search:a new hire starts on monday,account setup,2;54
+S06,search:video conference in the boardroom,there is no sound,52;42

@@ -1,0 +1,18 @@
+test_id,question,expected_ids,expected_keyword
+C01,How often do I have to change my password?,1,90 days
+C02,My VPN keeps disconnecting when I work from home,47,5 GHz
+C03,What should I do if I lose my company phone?,37;57,wipe
+C04,The printer says there is a paper jam,49,rear tray
+C05,I got an email asking for my bank account details,24,links
+C06,Can I use my personal Dropbox for work files?,38,not allowed
+C07,How long are emails kept?,29,five years
+C08,My account got locked after too many attempts,18,unlock
+C09,How do I request vacation days?,10,two weeks
+C10,When are security patches installed?,11,first weekend
+C11,The laptop battery does not charge,46,charger
+C12,How do visitors get Wi-Fi?,35;60,24 hours
+C13,What's the weather in Monterrey today?,,
+C14,Who won the football game yesterday?,,
+C15,Recommend me a good pizza place,,
+C16,What time does the cafeteria open?,,
+C17,What are the best movies of the year?,,

@@ -1,0 +1,62 @@
+digraph KMS {
+  rankdir=TB; compound=true; newrank=true;
+  graph [fontname="Helvetica", fontsize=14, nodesep=0.45, ranksep=0.55, pad=0.3, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", color="#3d3d3d", penwidth=1.1, margin="0.18,0.08"];
+  edge  [fontname="Helvetica", fontsize=10, color="#555555", arrowsize=0.7, fontcolor="#333333"];
+
+  subgraph cluster_repo {
+    label="1. Data repository"; style="rounded,filled"; fillcolor="#FFF4E5"; color="#F2A541";
+    corpus   [label="corpus.csv\n60 documents (id, title, text, category)", fillcolor="#FFE0B2"];
+    ontology [label="Ontology\n4 classes, 6 relations,\n37 concepts in 9 domains", fillcolor="#FFE0B2"];
+    evalgt   [label="Evaluation sets\nhand-labeled queries, cases\nand chatbot questions", fillcolor="#FFE0B2"];
+  }
+
+  subgraph cluster_proc {
+    label="2. Processing"; style="rounded,filled"; fillcolor="#E8F1FB"; color="#4C9BE8";
+    clean    [label="Text cleaning\nlowercase, no punctuation, stemming", fillcolor="#CFE2F7"];
+    tfidf    [label="TF-IDF vectors\n(lexical)", fillcolor="#CFE2F7"];
+    lsa      [label="LSA embeddings\nTruncatedSVD, 30 dims (semantic)", fillcolor="#CFE2F7"];
+    concepts [label="Concept detection\n(ontology vocabulary)", fillcolor="#CFE2F7"];
+  }
+
+  subgraph cluster_comp {
+    label="3. Components"; style="rounded,filled"; fillcolor="#EAF7EE"; color="#3BB273";
+    clf   [label="Classifier\nLogistic Regression\ncategory + confidence", fillcolor="#CDEFD8"];
+    rec   [label="Recommender\nhybrid cosine similarity\n+ search history boost", fillcolor="#CDEFD8"];
+    bot   [label="Chatbot\nretrieve, select sentences,\nanswer with sources", fillcolor="#CDEFD8"];
+    kg    [label="Knowledge graph\nNetworkX + PyVis", fillcolor="#CDEFD8"];
+    evalm [label="Evaluation\nprecision, recall, MRR", fillcolor="#CDEFD8"];
+  }
+
+  subgraph cluster_ui {
+    label="4. Interface (Streamlit Cloud)"; style="rounded,filled"; fillcolor="#F3E8FB"; color="#7B2CBF";
+    ui  [label="Web app\nOverview | Classify | Recommend | Chatbot | Knowledge Graph | Evaluation", fillcolor="#E2CCF5"];
+    ctx [label="Session search history\nqueries, viewed docs, chat questions", fillcolor="#E2CCF5"];
+  }
+
+  out [label="5. Outputs\npredicted category + evidence words  |  top-5 documents with scores and reasons  |\nanswers that cite their sources  |  interactive graph  |  quality metrics",
+       shape=box, style="rounded,filled", fillcolor="#EEEEEE", color="#888888"];
+
+  { rank=same; corpus; ontology; evalgt; }
+  { rank=same; clf; bot; rec; kg; evalm; }
+  clf -> bot -> rec -> kg -> evalm [style=invis];
+
+  corpus -> clean;
+  ontology -> concepts;
+  clean -> tfidf; tfidf -> lsa; clean -> concepts;
+
+  tfidf -> clf;
+  lsa -> rec; tfidf -> rec;
+  concepts -> kg [label="mentions"];
+  concepts -> rec [label="shared concepts", style=dashed];
+
+  clf -> bot [label="question\ncategory"];
+  bot -> rec [label="retrieved\ndocs", dir=back];
+  rec -> kg  [label="similarity\nmatrix"];
+  evalgt -> evalm [label="tests classifier,\nrecommender, chatbot"];
+
+  bot -> ui [ltail=cluster_comp, lhead=cluster_ui, dir=both, label="  user input / results  ", penwidth=1.6];
+  ui -> ctx [label="logs every action"];
+  ctx -> rec [label="context vector", constraint=false, color="#7B2CBF", fontcolor="#7B2CBF"];
+  ctx -> out [ltail=cluster_ui, label="  shown to the user"];
+}

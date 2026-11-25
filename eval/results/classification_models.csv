@@ -1,0 +1,5 @@
+model,accuracy,macro_precision,macro_recall,macro_f1
+Logistic Regression,0.967,0.969,0.967,0.967
+Keyword rules (baseline),0.95,0.955,0.95,0.95
+Multinomial Naive Bayes,0.917,0.921,0.917,0.916
+Logistic Regression (stop words removed),0.8,0.801,0.8,0.8

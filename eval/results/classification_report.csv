@@ -1,0 +1,3 @@
+class,precision,recall,f1,support
+Policy/Process,0.938,1.0,0.968,30
+Support/Incidents,1.0,0.933,0.966,30

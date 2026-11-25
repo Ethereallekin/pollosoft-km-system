@@ -1,0 +1,140 @@
+{
+  "corpus": {
+    "documents": 60,
+    "by_category": {
+      "Policy/Process": 30,
+      "Support/Incidents": 30
+    }
+  },
+  "classification": {
+    "best_model": "Logistic Regression",
+    "accuracy": 0.967,
+    "macro_precision": 0.969,
+    "macro_recall": 0.967,
+    "macro_f1": 0.967,
+    "per_class": [
+      {
+        "class": "Policy/Process",
+        "precision": 0.938,
+        "recall": 1.0,
+        "f1": 0.968,
+        "support": 30
+      },
+      {
+        "class": "Support/Incidents",
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966,
+        "support": 30
+      }
+    ]
+  },
+  "retrieval": {
+    "queries": 25,
+    "P@5_ceiling": 0.44,
+    "ablation": [
+      {
+        "configuration": "Phase I baseline: TF-IDF",
+        "P@5": 0.344,
+        "R@5": 0.777,
+        "Hit@1": 0.8,
+        "MRR": 0.851
+      },
+      {
+        "configuration": "+ stemming",
+        "P@5": 0.376,
+        "R@5": 0.843,
+        "Hit@1": 0.8,
+        "MRR": 0.867
+      },
+      {
+        "configuration": "+ LSA semantic (hybrid, final)",
+        "P@5": 0.392,
+        "R@5": 0.897,
+        "Hit@1": 0.84,
+        "MRR": 0.871
+      },
+      {
+        "configuration": "LSA semantic only",
+        "P@5": 0.4,
+        "R@5": 0.91,
+        "Hit@1": 0.84,
+        "MRR": 0.875
+      },
+      {
+        "configuration": "hybrid + ontology query expansion",
+        "P@5": 0.384,
+        "R@5": 0.857,
+        "Hit@1": 0.8,
+        "MRR": 0.848
+      },
+      {
+        "configuration": "TF-IDF + ontology expansion (no stemming)",
+        "P@5": 0.36,
+        "R@5": 0.803,
+        "Hit@1": 0.76,
+        "MRR": 0.83
+      }
+    ]
+  },
+  "recommendation": {
+    "cases": 10,
+    "P@5_ceiling": 0.44,
+    "summary": [
+      {
+        "recommender": "Phase I TF-IDF",
+        "P@5": 0.32,
+        "R@5": 0.733,
+        "Hit@1": 0.7,
+        "MRR": 0.764
+      },
+      {
+        "recommender": "Phase II hybrid (final)",
+        "P@5": 0.38,
+        "R@5": 0.883,
+        "Hit@1": 1.0,
+        "MRR": 1.0
+      }
+    ],
+    "consistency_final": {
+      "same_category@5": 0.593,
+      "shares_a_concept@5": 0.75,
+      "mean_similarity@5": 0.273
+    },
+    "consistency_phase1": {
+      "same_category@5": 0.667,
+      "shares_a_concept@5": 0.747,
+      "mean_similarity@5": 0.137
+    }
+  },
+  "search_context": {
+    "MRR without history": 0.6,
+    "MRR with history": 1.0,
+    "R@5 without history": 0.556,
+    "R@5 with history": 0.889
+  },
+  "chatbot": {
+    "in-scope questions": 12,
+    "source hit@1": 0.833,
+    "source hit@3": 1.0,
+    "answer contains key fact": 1.0,
+    "out-of-scope questions": 5,
+    "out-of-scope correctly rejected": 0.8
+  },
+  "knowledge_graph": {
+    "nodes": {
+      "category": 2,
+      "domain": 9,
+      "concept": 37,
+      "document": 60
+    },
+    "edges": {
+      "belongs_to": 60,
+      "part_of": 37,
+      "mentions": 183,
+      "co_occurs_with": 45,
+      "similar_to": 25,
+      "governed_by": 15
+    }
+  }
+}

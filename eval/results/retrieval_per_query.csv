@@ -1,0 +1,26 @@
+id,input,relevant,top5,P@5,R@5,Hit@1,MRR
+Q01,how often do I need to change my password,"1, 26, 50","50, 1, 26, 31, 52",0.6,1.0,1.0,1.0
+Q02,my computer got a virus,"8, 44, 51","8, 28, 2, 51, 6",0.4,0.6666666666666666,1.0,1.0
+Q03,I can't connect to the VPN from home,"3, 14, 47","47, 3, 14, 19, 60",0.6,1.0,1.0,1.0
+Q04,someone sent me a suspicious email asking for my bank details,"24, 39, 51","24, 36, 29, 48, 16",0.2,0.3333333333333333,1.0,1.0
+Q05,what happens to my laptop and accounts when I quit the company,6,"54, 18, 38, 57, 37",0.0,0.0,0.0,0.0
+Q06,the printer is not printing anything,"15, 36, 49","15, 49, 36, 13, 28",0.6,1.0,1.0,1.0
+Q07,how do I get a new program installed on my computer,"7, 20, 41, 56","7, 56, 20, 2, 58",0.6,0.75,1.0,1.0
+Q08,I lost my work phone on a trip,"5, 37, 57","57, 37, 5, 3, 18",0.6,1.0,1.0,1.0
+Q09,I am not getting new emails in my inbox,"16, 48","16, 2, 24, 48, 54",0.4,1.0,1.0,1.0
+Q10,I want to request some days off,10,"10, 54, 41, 31, 20",0.2,1.0,1.0,1.0
+Q11,there is no space left on the disk,"21, 55","21, 55, 19, 44, 38",0.4,1.0,1.0,1.0
+Q12,how are backups made and how do we recover lost files,"4, 33, 44","33, 4, 44, 37, 55",0.6,1.0,1.0,1.0
+Q13,the login code from the authenticator app never arrives,"27, 43","43, 27, 50, 1, 11",0.4,1.0,1.0,1.0
+Q14,visitors need internet access in the office,"35, 60","35, 9, 13, 60, 34",0.4,1.0,1.0,1.0
+Q15,people in the call can't hear us from the meeting room,"42, 52","52, 42, 59, 19, 1",0.4,1.0,1.0,1.0
+Q16,my screen turns blue when the computer starts,17,"17, 51, 14, 8, 59",0.2,1.0,1.0,1.0
+Q17,who is allowed to modify the production database,"9, 31","9, 53, 31, 33, 27",0.4,1.0,1.0,1.0
+Q18,I bought a cable for work and want my money back,12,"3, 46, 42, 12, 22",0.2,1.0,0.0,0.25
+Q19,where should I save my work files,"4, 34, 38","4, 38, 44, 55, 3",0.4,0.6666666666666666,1.0,1.0
+Q20,my account is blocked after typing the wrong password several times,"18, 50","18, 1, 50, 54, 26",0.4,1.0,1.0,1.0
+Q21,the internet is very slow in the conference room,19,"42, 52, 19, 59, 28",0.2,1.0,0.0,0.3333333333333333
+Q22,my second screen shows nothing,22,"17, 14, 49, 15, 22",0.2,1.0,0.0,0.2
+Q23,setting up accounts and computer for a new hire,"2, 54","54, 2, 18, 59, 1",0.4,1.0,1.0,1.0
+Q24,how should I protect confidential documents,"13, 34, 36","36, 13, 34, 56, 49",0.6,1.0,1.0,1.0
+Q25,my ticket was not solved who handles it next,"30, 40","30, 40, 7, 59, 24",0.4,1.0,1.0,1.0
