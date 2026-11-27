@@ -12,6 +12,8 @@ One web app that brings together four components over the same document reposito
 
 **Live app:** https://pollosoft-km-system-xyosk8cebnaukd3umk68bu.streamlit.app/
 
+**Technical document:** [docs/technical_document.pdf](docs/technical_document.pdf)
+
 ![Architecture](docs/architecture.png)
 
 ## Repository structure
@@ -39,6 +41,7 @@ eval/
   run_evaluation.py         runs everything and writes eval/results/
   results/                  metrics.json and CSV tables
 docs/
+  technical_document.pdf    technical document: architecture, components, deployment, use, evaluation
   architecture.png / .dot   architecture diagram
   usability.md              usability analysis
   sus_questionnaire.md      SUS survey template
