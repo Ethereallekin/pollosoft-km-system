@@ -10,7 +10,7 @@ One web app that brings together four components over the same document reposito
 | Chatbot | Answers natural-language questions from the repository and cites its sources | Retrieval + sentence selection (extractive generation) + out-of-scope check |
 | Knowledge graph | Shows documents, concepts, domains and categories and how they relate | Ontology → NetworkX graph → PyVis interactive view |
 
-**Live app:** _add the Streamlit Cloud link here after deploying_
+**Live app:** https://pollosoft-km-system-xyosk8cebnaukd3umk68bu.streamlit.app/
 
 ![Architecture](docs/architecture.png)
 
@@ -66,7 +66,7 @@ python eval/run_evaluation.py
 1. Push this folder to a **public GitHub repository** (`app.py` must be at the root).
 2. Go to https://share.streamlit.io, sign in with GitHub and click **Create app → Deploy a public app from GitHub**.
 3. Choose the repository, branch `main` and main file `app.py`, then click **Deploy**.
-4. Copy the app link into this README and into the technical document.
+4. Copy the app link into this README and into the technical document (current deployment: https://pollosoft-km-system-xyosk8cebnaukd3umk68bu.streamlit.app/).
 
 No secrets or API keys are needed: every model is trained from `data/corpus.csv` when the app starts (under a second).
 
